@@ -17,7 +17,8 @@ class ClienteInvalidoError(Exception):
 # FUNCIÓN PARA REGISTRAR ERRORES
 # ================================
 def registrar_log(mensaje):
-    ruta = os.path.join(os.path.dirname(__file__), "errores.log")
+    try:
+        ruta = os.path.join(os.path.dirname(__file__), "errores.log")
     
     with open(ruta, "a", encoding="utf-8") as archivo:
         fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -25,6 +26,8 @@ def registrar_log(mensaje):
 
     print("LOG guardado en:", ruta)
 
+except Exception as e:
+    print("No se puede guardar el log", e)
 
 # ================================
 # CLASE CLIENTE
@@ -51,7 +54,7 @@ class Cliente:
         return identificacion
 
     def validar_correo(self, correo):
-        if "@" not in correo or "." not in correo:
+        if "@" not in correo or "." not in correo or correo.startswith("@":
             raise DatoInvalidoError("El correo electrónico no tiene un formato válido.")
         return correo
 
@@ -64,11 +67,11 @@ class Cliente:
     # MOSTRAR INFORMACIÓN
     # ----------------------------
     def mostrar_informacion(self):
-        print("Cliente registrado:")
-        print("Nombre:", self.nombre)
-        print("ID:", self.identificacion)
-        print("Correo:", self.correo)
-        print("Teléfono:", self.telefono)
+        print("\n--- CLIENTE REGISTRADO ---")
+        print(f"Nombre: {self.nombre}")
+        print(f"ID: {self.identificacion}")
+        print(f"Correo: {self.correo}")
+        print(f"Teléfono: {self.telefono}")
 
 
 # ================================
@@ -101,6 +104,7 @@ def probar_clientes():
             cliente.mostrar_informacion()
 
         finally:
+            print("Proceso finalizado")
             print("-" * 40)
 
 
