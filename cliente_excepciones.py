@@ -35,10 +35,10 @@ def registrar_log(mensaje):
 class Cliente:
 
     def __init__(self, nombre, identificacion, correo, telefono):
-        self.nombre = self.validar_nombre(nombre)
-        self.identificacion = self.validar_identificacion(identificacion)
-        self.correo = self.validar_correo(correo)
-        self.telefono = self.validar_telefono(telefono)
+        self._nombre = self.validar_nombre(nombre)
+        self._identificacion = self.validar_identificacion(identificacion)
+        self._correo = self.validar_correo(correo)
+        self._telefono = self.validar_telefono(telefono)
 
     # ----------------------------
     # VALIDACIONES
@@ -70,22 +70,41 @@ class Cliente:
         if not telefono.isdigit() or len(telefono) < 7:
             raise DatoInvalidoError("El teléfono debe contener mínimo 7 números.")
         return telefono
+    # ----------------------------
+    # GETTERS
+    # ----------------------------
+    # Métodos getter para acceder de forma controlada
+    # a los atributos privados del cliente
+    @property
+    def nombre(self):
+        return self.__nombre
 
+    @property
+    def identificacion(self):
+        return self.__identificacion
+
+    @property
+    def correo(self):
+        return self.__correo
+
+    @property
+    def telefono(self):
+        return self.__telefono
     # ----------------------------
     # MOSTRAR INFORMACIÓN
     # ----------------------------
     def mostrar_informacion(self):
         print("\n--- CLIENTE REGISTRADO ---")
-        print(f"Nombre: {self.nombre}")
-        print(f"ID: {self.identificacion}")
-        print(f"Correo: {self.correo}")
-        print(f"Teléfono: {self.telefono}")
+        print(f"Nombre: {self._nombre}")
+        print(f"ID: {self._identificacion}")
+        print(f"Correo: {self._correo}")
+        print(f"Teléfono: {self._telefono}")
 
     # ----------------------------
     # RESUMEN DEL CLIENTE
     # ----------------------------
     def resumen(self):
-        return f"{self.nombre} - {self.correo}"
+        return f"{self._nombre} - {self._correo}"
 
 # ================================
 # FUNCIÓN DE PRUEBA
