@@ -6,3 +6,22 @@
 [2026-05-06 11:54:00] Error con datos ('Carlos', 'ABC123', 'carlos@gmail.com', '3117550699'): La identificación solo debe contener números.
 [2026-05-06 11:54:00] Error con datos ('Ana', '123456789', 'anaemail.com', '3117550699'): El correo electrónico no tiene un formato válido.
 [2026-05-06 11:54:00] Error con datos ('Luis', '123456789', 'luis@gmail.com', '123'): El teléfono debe contener mínimo 7 números.
+[2026-05-06 19:47:10] Error con datos ('Jo', '123456789', 'juan@gmail.com', '3117550699'): El nombre debe tener mínimo 3 caracteres.
+[2026-05-06 19:47:10] Error con datos ('Carlos', 'ABC123', 'carlos@gmail.com', '3117550699'): La identificación solo debe contener números.
+[2026-05-06 19:47:10] Error con datos ('Ana', '123456789', 'anaemail.com', '3117550699'): El correo electrónico no tiene un formato válido.
+[2026-05-06 19:47:10] Error con datos ('Luis', '123456789', 'luis@gmail.com', '123'): El teléfono debe contener mínimo 7 números.
+[2026-05-06 19:47:37] Error con datos ('Jo', '123456789', 'juan@gmail.com', '3117550699'): El nombre debe tener mínimo 3 caracteres.
+[2026-05-06 19:47:37] Error con datos ('Carlos', 'ABC123', 'carlos@gmail.com', '3117550699'): La identificación solo debe contener números.
+[2026-05-06 19:47:37] Error con datos ('Ana', '123456789', 'anaemail.com', '3117550699'): El correo electrónico no tiene un formato válido.
+[2026-05-06 19:47:37] Error con datos ('Luis', '123456789', 'luis@gmail.com', '123'): El teléfono debe contener mínimo 7 números.
+[2026-05-06 20:46:45] Error inesperado: 'Cliente' object has no attribute '_Cliente__nombre'
+[2026-05-06 20:53:05] Error inesperado: 'Cliente' object has no attribute '_nombre'
+[2026-05-06 20:55:04] Error inesperado: 'Cliente' object has no attribute 'validar_nombre'
+[2026-05-06 20:57:46] Cliente registrado: stiven
+[2026-05-06 21:01:34] Sistema finalizado correctamente.
+[2026-05-06 21:02:44] Error identificación: La identificación es demasiado corta.
+[2026-05-06 21:03:08] Cliente registrado: Stiven Bermudez
+[2026-05-06 21:03:51] Cliente registrado: Alejandro Guevara
+[2026-05-06 21:05:05] Error de valor: invalid literal for int() with base 10: '4 horas'
+[2026-05-06 21:05:35] Reserva creada para Stiven Bermudez
+[2026-05-06 21:05:45] Sistema finalizado correctamente.
